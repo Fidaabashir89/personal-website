@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" >
 <head>
-  <script src="scripts.js"></script>
   <meta charset="UTF-8">
   <title>CodePen - Fidaa Bashir Personal Website</title>
   <link rel="stylesheet" href="./style.css">
@@ -113,7 +112,14 @@ Make the first test pass by adding a <header> </header>-->
        </ul>
    </div>
  </section>
-    
+    <section>
+      <p>So far you have rolled:</p>
+      <ul id="list"></ul>
+      <button id="button_roll">Roll the dice</button>
+      <p>Total: <span id="total">0</span>. <span id="info">Keep playing!</span></p>
+      <button id="button_remove">Remove the last roll</button>
+      <button id="button_restart">Start again</button>  
+    </section>
   <footer class="c-site-footer">
       <div class="container">
           <div class="footer-content h-center">
@@ -133,12 +139,7 @@ Don't delete!-->
     <script src='https://unpkg.com/jest-lite@1.0.0-alpha.4/dist/core.js'></script>
     <script src='https://unpkg.com/jest-lite@1.0.0-alpha.4/dist/prettify.js'></script>
     <script src="./script.js"></script>
-    <p>So far you have rolled:</p>
-<ul id="list"></ul>
-<button id="button_roll">Roll the dice</button>
-<p>Total: <span id="total">0</span>. <span id="info">Keep playing!</span></p>
-<button id="button_remove">Remove the last roll</button>
-<button id="button_restart">Start again</button>  
+   
 </body>
 </html>
 <!-- partial -->
