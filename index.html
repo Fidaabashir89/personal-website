@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <title>CodePen - Fidaa Bashir Personal Website</title>
   <link rel="stylesheet" href="./style.css">
+  <script src="scripts.js"></script>
+
 </head>
 <body>
 <!-- partial:index.partial.html -->
@@ -63,6 +65,14 @@ Make the first test pass by adding a <header> </header>-->
   </div>
 </div>
 </section>
+<section>
+  <p>So far you have rolled:</p>
+  <ul id="list"></ul>
+  <button id="button_roll">Roll the dice</button>
+  <p>Total: <span id="total">0</span>. <span id="info">Keep playing!</span></p>
+  <button id="button_remove">Remove the last roll</button>
+  <button id="button_restart">Start again</button> 
+</section>
 <section id="projects">
     <div class="container">
         <h2 class="subtitle">My Projects</h2>
@@ -94,14 +104,6 @@ Make the first test pass by adding a <header> </header>-->
         </div>
     </div>
 </section>
-    <section>
-      <ul>
- <title>Image Carousel</title> 
-</ul> 
-<img id="image" width="150" height"150">
-<button id="previous">Previous</button>
-<button id="next">Next</button>
-    </section>
   <div class="section">
       <div class="container h-center">
           <iframe src="https://www.youtube.com/embed/qZjWUkohSQg" title="Coding Session - Lofi Hip Hop Mix [ Coding Lofi Mix | Coding Music ]"  allow="accelerometer, autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -119,18 +121,19 @@ Make the first test pass by adding a <header> </header>-->
    </div>
  </section>
     <section>
-      <p>So far you have rolled:</p>
-      <ul id="list"></ul>
-      <button id="button_roll">Roll the dice</button>
-      <p>Total: <span id="total">0</span>. <span id="info">Keep playing!</span></p>
-      <button id="button_remove">Remove the last roll</button>
-      <button id="button_restart">Start again</button>  
+      <input id="input_bar"></input>
+      <button id="Enter">Enter</button>
+      <p>Earnings:<span id="total_earnings"></span></p>
+      <ul id="earning_list"></ul>
+      <p>Expenses:<span id="total_expenses"></span></p>
+      <ul id="expenses_list"></ul>
+      <p>balance: <span id="total"></span></p>
     </section>
     <section>
       <p>commenting:</p>
-<ul id="list"></ul>
-<input id="text"/>
-<button id="button" style="background-color:#660000;">add your comment</button>
+      <ul id="list"></ul>
+      <input id="text"/>
+      <button id="button" style="background-color:#660000;">add your comment</button>
     </section>
   <footer class="c-site-footer">
       <div class="container">
@@ -151,9 +154,9 @@ Don't delete!-->
     <script src='https://unpkg.com/jest-lite@1.0.0-alpha.4/dist/core.js'></script>
     <script src='https://unpkg.com/jest-lite@1.0.0-alpha.4/dist/prettify.js'></script>
     <script src="./script.js"></script>
-   
 </body>
 </html>
 <!-- partial -->
-
-
+  
+</body>
+</html>

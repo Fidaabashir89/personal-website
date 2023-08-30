@@ -1,6 +1,66 @@
-let element_Photos = document.getElementById('Photos');
-element_Photos.innerText = 'photos';
+var Input_value, Expenses, Earnings, Balance, item, number;
 
+function convertToNumber(value) {
+  // Convert a string value to a number if possible
+  let number_value = Number(value);
+  if (Number.isNaN(number_value)) {
+    return 0
+  } else {
+    return number_value
+  }
+}
+
+// Describe this function...
+function EarningsMethod() {
+  if(--window.LoopTrap <= 0) throw "Infinite loop.";
+  let element_total_earnings = document.getElementById('total_earnings');
+  element_total_earnings.innerText = Earnings.reduce((a,b) => a+b, 0);
+  let element_earning_list = document.getElementById('earning_list');
+  element_earning_list.replaceChildren();
+  Earnings.forEach((item) => {
+    let new_li = document.createElement('li');
+    new_li.innerText = number;
+
+    element_earning_list.appendChild(new_li);
+  });
+}
+
+// Describe this function...
+function ExpensesMethod() {
+  if(--window.LoopTrap <= 0) throw "Infinite loop.";
+  let element_total_expenses = document.getElementById('total_expenses');
+  element_total_expenses.innerText = Expenses.reduce((a,b) => a+b, 0);
+  let element_expenses_list = document.getElementById('expenses_list');
+  element_expenses_list.replaceChildren();
+  Expenses.forEach((item) => {
+    let new_li2 = document.createElement('li');
+    new_li2.innerText = item;
+
+    element_expenses_list.appendChild(new_li2);
+  });
+}
+
+
+Input_value = [0];
+Expenses = [];
+Earnings = [];
+Balance = [];
+
+
+document.getElementById('Enter').addEventListener('click', (event) => {
+  Input_value = convertToNumber(document.getElementById('input_bar').value);
+  Balance.push(Input_value);
+  if (Input_value < 0) {
+    Expenses.push(Input_value);
+    ExpensesMethod();
+  } else {
+    Earnings.push(Input_value);
+    EarningsMethod();
+  }
+  let element_total = document.getElementById('total');
+  element_total.innerText = Balance.reduce((a,b) => a+b, 0);
+
+});
 var dice, rolls, sum, item;
 
 // Describe this function...
@@ -22,25 +82,7 @@ function showrolls() {
 
     element_list2.appendChild(new_li);
   });
-}var images;
-
-
-images = ['https://images.unsplash.com/reserve/bOvf94dPRxWu0u3QsPjF_tree.jpg?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1476&q=80', 'https://images.unsplash.com/photo-1500622944204-b135684e99fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1461&q=80', 'https://images.unsplash.com/photo-1546587348-d12660c30c50?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1474&q=80', 'https://images.unsplash.com/photo-1420593248178-d88870618ca0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80', 'https://images.unsplash.com/photo-1585016495481-91613a3ab1bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1376&q=80', 'https://images.unsplash.com/photo-1441239372925-ac0b51c4c250?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1464&q=80', 'https://images.unsplash.com/photo-1520962922320-2038eebab146?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80'];
-
-
-document.getElementById('previous').addEventListener('click', (event) => {
-  images.unshift(images.slice(-1)[0]);
-  let element_image = document.getElementById('image');
-  element_image.setAttribute("src", images.pop());
-
-});
-
-document.getElementById('next').addEventListener('click', (event) => {
-  images.push(images[0]);
-  let element_image2 = document.getElementById('image');
-  element_image2.setAttribute("src", images.shift());
-
-});
+}
 
 // Describe this function...
 function showinfo() {
@@ -118,11 +160,11 @@ function convertToNumber(value) {
 
 
 
-document.getElementById('button').addEventListener('click', (event) => {
-  let element_list = document.getElementById('list');
+document.getElementById('comment').addEventListener('click', (event) => {
+  let element_li = document.getElementById('li');
   let new_li = document.createElement('li');
   new_li.innerText = document.getElementById('text').value;
 
-  element_list.appendChild(new_li);
+  element_li.appendChild(new_li);
 
 });
