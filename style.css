@@ -204,7 +204,9 @@ nav .nav-content ul li a:hover {
   border-radius: 7px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
-
+#welcome-section .aabb {
+  margin-top: 70px;
+}
 /* project section */
 #projects {
   background-color: #e9edc9;
@@ -257,6 +259,21 @@ iframe {
 }
 
 /* contact section */
+#contact .xxyy {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+#contact .fff {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
 #contact .container {
   display: flex;
   justify-content: center;
