@@ -306,7 +306,7 @@ footer .footer-content img {
 .container {
   display: flex;
   flex-direction: column;
-  align-items: initial;
+  align-items: center;
   text-align: center;
   margin: 0 auto;
   width: 80%; /* Adjust the width as needed */
@@ -331,8 +331,8 @@ span {
 /* Center the content vertically and horizontally */
 body {
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   min-height: 100vh;
   margin: 0;
 }
