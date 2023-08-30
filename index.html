@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>CodePen - Fidaa Bashir Personal Website</title>
   <link rel="stylesheet" href="./style.css">
-  <script src="scripts.js"></script>
 
 </head>
 <body>
@@ -20,6 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300&display=swap" rel="stylesheet">
     <link rel='stylesheet' href='https://unpkg.com/jest-lite@1.0.0-alpha.4/dist/prettify.css'>
     <link rel="stylesheet" href="./style2.css">
+    <script src="scripts.js"></script>
 </head>
 <body>
     <!-- partial:index.partial.html -->
@@ -66,12 +66,13 @@ Make the first test pass by adding a <header> </header>-->
 </div>
 </section>
 <section>
-  <p>So far you have rolled:</p>
-  <ul id="list"></ul>
-  <button id="button_roll">Roll the dice</button>
-  <p>Total: <span id="total">0</span>. <span id="info">Keep playing!</span></p>
-  <button id="button_remove">Remove the last roll</button>
-  <button id="button_restart">Start again</button> 
+  <input id="input_bar"></input>
+  <button id="Enter">Enter</button>
+  <p>Earnings:<span id="total_earnings"></span></p>
+  <ul id="earning_list"></ul>
+  <p>Expenses:<span id="total_expenses"></span></p>
+  <ul id="expenses_list"></ul>
+  <p>balance: <span id="total"></span></p>
 </section>
 <section id="projects">
     <div class="container">
@@ -104,12 +105,21 @@ Make the first test pass by adding a <header> </header>-->
         </div>
     </div>
 </section>
+    
   <div class="section">
       <div class="container h-center">
           <iframe src="https://www.youtube.com/embed/qZjWUkohSQg" title="Coding Session - Lofi Hip Hop Mix [ Coding Lofi Mix | Coding Music ]"  allow="accelerometer, autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
      </div>
             <!--  width="950" height="560" -->
 </div>
+<section>
+  <p>So far you have rolled:</p>
+  <ul id="list"></ul>
+  <button id="button_roll">Roll the dice</button>
+  <p>Total: <span id="total">0</span>. <span id="info">Keep playing!</span></p>
+  <button id="button_remove">Remove the last roll</button>
+  <button id="button_restart">Start again</button>
+  </section>
 <section id="contact">
     <div class="container">
         <h2 class="subtitle">Contact me</h2>
@@ -120,22 +130,12 @@ Make the first test pass by adding a <header> </header>-->
        </ul>
    </div>
  </section>
-<section><div class="container">
-  <input id="input_bar">
-  <button id="Enter">Enter</button>
-  
-  <p>Earnings: <span id="total_earnings"></span></p>
-  <ul id="earning_list"></ul>
-  
-  <p>Expenses: <span id="total_expenses"></span></p>
-  <ul id="expenses_list"></ul>
-  
-  <p>Balance: <span id="total"></span></p>
-</div>
-<section>
-<center><ul id="li"></ul>
+ <section>
+  <ul id="li"></ul>
   <input id="text"/>
- <button id="comment" style="background-color:#660000;">add your comment</button></center></section>>
+  <button id="comment" style="background-color:#660000;">add your comment</button>
+</section>
+    
   <footer class="c-site-footer">
       <div class="container">
           <div class="footer-content h-center">
